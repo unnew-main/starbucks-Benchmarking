@@ -5,10 +5,11 @@ import { Header, MainBanner } from './components';
 function App() {
   return (
     <Container>
-      <ConTextContainer>
-        <Header />
+      <Header />
+
+      <ContextContainer>
         <MainBanner></MainBanner>
-      </ConTextContainer>
+      </ContextContainer>
     </Container>
   );
 }
@@ -18,8 +19,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const ConTextContainer = styled.div`
+const ContextContainer = styled.div`
   justify-content: center;
   align-items: center;
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
 `;
 export default App;

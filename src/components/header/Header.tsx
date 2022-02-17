@@ -47,11 +47,23 @@ const Container = styled.div`
 `;
 const MarginWrapper = styled.div`
   position: relative;
-  height: 120px;
-
-  margin: 0 30px;
+  width: 100%;
+  height: 100%;
+  margin: 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+const LogoWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  cursor: pointer;
 `;
 
+const Logo = styled.img``;
 const InfoWrapper = styled.div`
   position: relative;
   width: 1100px;
@@ -60,15 +72,6 @@ const InfoWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
 `;
-const LogoWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  cursor: pointer;
-`;
-
-const Logo = styled.img``;
 
 const UtilNav = styled.div`
   display: flex;
