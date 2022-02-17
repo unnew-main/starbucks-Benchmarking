@@ -4,9 +4,11 @@ import { Header, MainBanner } from './components';
 
 function App() {
   return (
-    <Container className="App">
-      <Header />
-      <MainBanner></MainBanner>
+    <Container>
+      <ConTextContainer>
+        <Header />
+        <MainBanner></MainBanner>
+      </ConTextContainer>
     </Container>
   );
 }
@@ -15,7 +17,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 `;
-
+const ConTextContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+`;
 export default App;

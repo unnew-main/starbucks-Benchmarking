@@ -9,13 +9,17 @@ export function UtilItem({ children }: UtilItemType) {
 }
 
 const Item = styled.div`
+  margin: 0;
+  padding: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 14px;
+  padding-left: 14px;
   margin-left: 1px;
-  border-left: 1px solid gray;
+  border-left: 1px solid #ccc;
+  font-size: 13px;
+  color: #555;
   :first-child {
     margin-left: 0;
     border-left: 0px;
