@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, MainBanner } from './components';
+import { Header, MainBanner, LineNotice } from './components';
 
 function App() {
   return (
@@ -8,7 +8,8 @@ function App() {
       <Header />
 
       <ContextContainer>
-        <MainBanner></MainBanner>
+        <MainBanner />
+        <LineNotice />
       </ContextContainer>
     </Container>
   );
