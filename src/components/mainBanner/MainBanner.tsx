@@ -1,68 +1,141 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Button } from '../features';
 
 export function MainBanner() {
   return (
     <Container>
-      <BackgroundWrapper></BackgroundWrapper>
-
       <Wrapper>
         <TitleWrapper>
-          <ImageWrapper>
+          <TitleImageWrapper>
             <TitleImage src="https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_main_slogan.png" />
-          </ImageWrapper>
-          <Button borderColor={'#47967c'} fontColor={'#47967c'}>
-            자세히 보기
-          </Button>
+          </TitleImageWrapper>
+          <ButtonWrapper>
+            <Button borderColor={'#47967c'} fontColor={'#47967c'}>
+              자세히 보기
+            </Button>
+          </ButtonWrapper>
         </TitleWrapper>
+        <ImgsWrapper>
+          <ImgWrapper>
+            <DrinkImg src="https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_latte.png" />
+          </ImgWrapper>
+          <ImgWrapper>
+            <DrinkImg src="https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_drink_2.png" />
+          </ImgWrapper>
+          <ImgWrapper>
+            <DrinkImg src="https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_frappuccino_0203.png" />
+          </ImgWrapper>
+        </ImgsWrapper>
       </Wrapper>
     </Container>
   );
 }
+const OpacityAnimation = keyframes`
+  form{opacity: 0;}
+  to{opacity: 1;}
+`;
 
 const Container = styled.div`
-  width: auto;
-  height: 58vw;
+  width: 100%;
+  height: 646px;
   position: relative;
-  background: no-repeat center/80% url('https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_main_bg.jpg');
+  background: 100% url('https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_main_bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
-  position: relative;
+  position: absolute;
   width: 80%;
   height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   z-index: 9;
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 1130px;
 `;
 const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  justify-content: flex-start;
-  align-items: flex-start;
-  z-index: 9;
-  width: 50%;
-`;
-const ImageWrapper = styled.div`
   position: absolute;
 
-  top: 10.5%;
-  left: 10.5%;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+`;
+const TitleImageWrapper = styled.div`
+  position: absolute;
+  top: 9.1%;
+  left: 0;
   margin: auto;
 `;
 const TitleImage = styled.img`
+  opacity: 0;
+  animation-name: ${OpacityAnimation};
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 355px;
+`;
+const ButtonWrapper = styled.div`
+  position: absolute;
+  z-index: 9;
+  top: 39.5%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 355px;
+  opacity: 0;
+  animation-name: ${OpacityAnimation};
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+`;
+const ImgsWrapper = styled.div`
+  position: absolute;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const BackgroundWrapper = styled.div`
-  /* position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; */
+const ImgWrapper = styled.div`
+  position: absolute;
+  opacity: 0;
+  animation-name: ${OpacityAnimation};
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  :nth-child(1) {
+    top: 42%;
+    left: 14.7%;
+    z-index: 9;
+    width: 49%;
+    max-width: 540px;
+    animation-delay: 1s;
+  }
+  :nth-child(2) {
+    top: 13%;
+    left: 36.1%;
+    z-index: 8;
+    width: 44%;
+    max-width: 491px;
+    animation-delay: 1.5s;
+  }
+  :nth-child(3) {
+    top: 8.8%;
+    right: 0.9%;
+    width: 25%;
+    animation-delay: 2s;
+    max-width: 274px;
+  }
+`;
+
+const DrinkImg = styled.img`
+  position: absolute;
 `;
