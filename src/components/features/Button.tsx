@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 type ButtonProps = {
   children: string;
-
   borderColor: string;
-  backgroudColor?: string;
   fontColor: string;
+  padding: string;
+
+  backgroudColor?: string;
+  fontWeight?: string;
 };
 export function Button({ children, ...props }: ButtonProps) {
   return (
     <ButtonWrapper props={props}>
-      <ButtonText>{children}</ButtonText>
+      <ButtonText fontWeight={props.fontWeight}>{children}</ButtonText>
     </ButtonWrapper>
   );
 }
@@ -20,6 +22,8 @@ type ButtonStyleType = {
   props: {
     borderColor: string;
     fontColor: string;
+    padding: string;
+
     backgroudColor?: string;
   };
 };
@@ -34,12 +38,14 @@ const ButtonWrapper = styled.div<ButtonStyleType>`
   color: ${({ props }) => props.fontColor};
   background-color: ${({ props }) => (props ? props.backgroudColor : 'transparent')};
   border-radius: 5px;
-  padding: 0 29px;
+  padding: 0px ${({ props }) => props.padding};
   line-height: 34px;
+
   cursor: pointer;
 `;
-const ButtonText = styled.div`
+const ButtonText = styled.div<{ fontWeight?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 'normal')};
 `;

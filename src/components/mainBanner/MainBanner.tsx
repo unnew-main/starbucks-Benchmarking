@@ -11,7 +11,7 @@ export function MainBanner() {
             <TitleImage src="https://image.istarbucks.co.kr/img/event/2022/2022_Strawberry_main_slogan.png" />
           </TitleImageWrapper>
           <ButtonWrapper>
-            <Button borderColor={'#47967c'} fontColor={'#47967c'}>
+            <Button borderColor={'#47967c'} fontColor={'#47967c'} padding="29px">
               자세히 보기
             </Button>
           </ButtonWrapper>
