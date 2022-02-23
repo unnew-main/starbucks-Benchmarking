@@ -20,12 +20,23 @@ export function NewRewards() {
               <Button borderColor={'#00704a'} fontColor={'#fff'} backgroudColor={'#00704a'} fontWeight={'bold'} padding={'18.5px'}>
                 회원가입
               </Button>
+              <Air />
               <Button borderColor={'#fff'} fontColor={'#fff'} fontWeight={'bold'} padding={'18.5px'}>
                 로그인
               </Button>
             </InfoButtonWrapper>
           </InfoWrapper>
-          <GiftWrapper></GiftWrapper>
+          <GiftWrapper>
+            <GiftText>
+              회원 가입 후, 스타벅스 e-Gift Card를 "나에게 선물하기"로 구매하시고, 편리하게 등록하세요!
+              <br /> 카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!
+            </GiftText>
+            <GiftButtonWrapper>
+              <Button borderColor={'#fff'} fontColor={'#fff'} fontWeight={'bold'} padding={'18.5px'}>
+                e-Gift Card 선물하기
+              </Button>
+            </GiftButtonWrapper>
+          </GiftWrapper>
         </ContentsWrapper>
       </Wrapper>
     </Container>
@@ -73,7 +84,7 @@ const InfoWrapper = styled.div`
 const InfoTextWrapper = styled.div`
   width: 100%;
   border-bottom: 1px solid #4b615b;
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 `;
 
 const InfoTitle = styled.div`
@@ -95,4 +106,20 @@ const InfoButtonWrapper = styled.div`
   right: 0;
   bottom: 40px;
 `;
-const GiftWrapper = styled.div``;
+
+const Air = styled.div`
+  width: 9px;
+`;
+
+const GiftWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+const GiftText = styled.div``;
+const GiftButtonWrapper = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+`;

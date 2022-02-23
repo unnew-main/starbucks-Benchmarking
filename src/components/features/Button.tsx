@@ -42,10 +42,18 @@ const ButtonWrapper = styled.div<ButtonStyleType>`
   line-height: 34px;
 
   cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
 `;
 const ButtonText = styled.div<{ fontWeight?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 'normal')};
+  cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
 `;
