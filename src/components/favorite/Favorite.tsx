@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { Button } from '../features';
 export function Favorite() {
   return (
     <Container>
@@ -11,7 +11,11 @@ export function Favorite() {
           <SubTitleWrapper>
             <SubTitle src="	https://image.istarbucks.co.kr/img/event/2022/fav_prod_txt02_0216.png" />
           </SubTitleWrapper>
-          <ButtonWrapper></ButtonWrapper>
+          <ButtonWrapper>
+            <Button fontColor={'#fff'} borderColor={'#fff'} fontWeight={'bold'} padding={'25px'}>
+              자세히 보기
+            </Button>
+          </ButtonWrapper>
         </ContentWrapper>
         <FavImageWrapper>
           <FavImage src="	https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_pick_img.png" />
@@ -45,6 +49,8 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 `;
 const TitleWrapper = styled.div`
   display: flex;
@@ -54,8 +60,15 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.img``;
-const SubTitleWrapper = styled.div``;
+const SubTitleWrapper = styled.div`
+  margin-bottom: 50px;
+`;
 const SubTitle = styled.img``;
-const ButtonWrapper = styled.div``;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const FavImageWrapper = styled.div``;
 const FavImage = styled.img``;
