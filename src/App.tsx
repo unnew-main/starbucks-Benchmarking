@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, MainBanner, LineNotice, NewRewards, Reserve } from './components';
+import { Header, MainBanner, LineNotice, NewRewards, Reserve, Favorite } from './components';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <LineNotice />
         <NewRewards />
         <Reserve />
+        <Favorite />
       </ContextContainer>
     </Container>
   );
