@@ -68,8 +68,8 @@ const Bg = styled.img<{ scroll: number }>`
   width: auto;
   max-width: none;
   vertical-align: top;
-  opacity: ${({ scroll }) => (scroll > 400 ? 1 : 0)};
-  transition: 3s;
+  opacity: ${({ scroll }) => (scroll > 460 ? 1 : 0)};
+  transition: 2s ease-out;
 `;
 const ButtonWrapper = styled.div`
   position: relative;
