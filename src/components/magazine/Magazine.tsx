@@ -7,7 +7,6 @@ export function Magazine() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setOnScroll(window.scrollY);
-      console.log(window.scrollY);
     });
   }, []);
   return (
