@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Button } from '../features';
 export function Reserve() {
+  const [onScroll, setOnScroll] = useState<number>(0);
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      console.log(window.scrollY);
+      setOnScroll(window.scrollY);
     });
   }, []);
   return (
@@ -18,7 +20,7 @@ export function Reserve() {
         </ButtonWrapper>
       </LogoWrapper>
       <BgWrapper>
-        <Bg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual.jpg" />
+        <Bg scroll={onScroll} src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual.jpg" />
       </BgWrapper>
     </Container>
   );
@@ -27,7 +29,8 @@ export function Reserve() {
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px;
+  overflow: hidden;
   background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual_bg.jpg');
 `;
 
@@ -61,10 +64,12 @@ const BgWrapper = styled.div`
     right: -60%;
   }
 `;
-const Bg = styled.img`
+const Bg = styled.img<{ scroll: number }>`
   width: auto;
   max-width: none;
   vertical-align: top;
+  opacity: ${({ scroll }) => (scroll > 400 ? 1 : 0)};
+  transition: 3s;
 `;
 const ButtonWrapper = styled.div`
   position: relative;
