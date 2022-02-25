@@ -4,3 +4,4 @@ export { LineNotice } from './lineNotice/LineNotice';
 export { NewRewards } from './newRewards/NewRewards';
 export { Reserve } from './reserve/Reserve';
 export { Favorite } from './favorite/Favorite';
+export { Magazine } from './magazine/Magazine';
