@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Button } from '../features';
+import { Button } from '../Atoms';
 export function Magazine() {
   const [onScroll, setOnScroll] = useState<number>(0);
 
@@ -18,7 +18,7 @@ export function Magazine() {
           </TitleWrapper>
 
           <ButtonWrapper>
-            <Button borderColor={'#000'} fontColor={'#000'} padding={'25px'}>
+            <Button borderColor="black" fontColor="black" padding="25px">
               자세히 보기
             </Button>
           </ButtonWrapper>

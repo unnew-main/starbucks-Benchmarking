@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Button } from '../features';
+import { Button } from '../Atoms';
 export function Store() {
   const [onScroll, setOnScroll] = useState<number>(0);
 
@@ -20,7 +20,7 @@ export function Store() {
         <TitleImage scroll={onScroll} />
         <SubTitleImage scroll={onScroll} />
         <ButtonWrapper scroll={onScroll}>
-          <Button fontColor={'#000'} borderColor={'#000'} fontWeight={'bold'} padding={'30px'}>
+          <Button fontColor="black" borderColor="black" fontWeight="bold" padding="30px">
             매장 찾기
           </Button>
         </ButtonWrapper>

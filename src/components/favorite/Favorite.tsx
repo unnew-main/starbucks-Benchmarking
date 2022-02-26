@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../features';
+import { Button } from '../Atoms';
 export function Favorite() {
   return (
     <Container>
@@ -12,7 +12,7 @@ export function Favorite() {
             <SubTitle src="	https://image.istarbucks.co.kr/img/event/2022/fav_prod_txt02_0216.png" />
           </SubTitleWrapper>
           <ButtonWrapper>
-            <Button fontColor={'#fff'} borderColor={'#fff'} fontWeight={'bold'} padding={'25px'}>
+            <Button fontColor="white" borderColor="white" fontWeight="bold" padding="25px">
               자세히 보기
             </Button>
           </ButtonWrapper>

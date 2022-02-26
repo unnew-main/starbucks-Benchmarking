@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../features';
+import { Button } from '../Atoms';
 export function NewRewards() {
   return (
     <Container>
@@ -17,11 +17,11 @@ export function NewRewards() {
               </InfoDesc>
             </InfoTextWrapper>
             <InfoButtonWrapper>
-              <Button borderColor={'#00704a'} fontColor={'#fff'} backgroudColor={'#00704a'} fontWeight={'bold'} padding={'18.5px'}>
+              <Button borderColor="green" fontColor="white" backgroudColor="green" fontWeight="bold" padding="18.5px">
                 회원가입
               </Button>
               <Air />
-              <Button borderColor={'#fff'} fontColor={'#fff'} fontWeight={'bold'} padding={'18.5px'}>
+              <Button borderColor="white" fontColor="white" fontWeight="bold" padding="18.5px">
                 로그인
               </Button>
             </InfoButtonWrapper>
@@ -32,7 +32,7 @@ export function NewRewards() {
               <br /> 카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!
             </GiftText>
             <GiftButtonWrapper>
-              <Button borderColor={'#fff'} fontColor={'#fff'} fontWeight={'bold'} padding={'18.5px'}>
+              <Button borderColor="white" fontColor="white" fontWeight="bold" padding="18.5px">
                 e-Gift Card 선물하기
               </Button>
             </GiftButtonWrapper>
