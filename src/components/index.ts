@@ -6,3 +6,4 @@ export { Reserve } from './reserve/Reserve';
 export { Favorite } from './favorite/Favorite';
 export { Magazine } from './magazine/Magazine';
 export { Store } from './store/Store';
+export { Footer } from './footer/Footer';

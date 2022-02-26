@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import styled from 'styled-components';
 import type { colorType } from '../../constants/colorScheme';
 import ButtonColor from '../../constants/colorScheme';
@@ -12,7 +11,7 @@ type ButtonProps = {
   fontWeight?: 'bold';
 };
 export function Button({ children, ...props }: ButtonProps) {
-  const changeColorSwitch = (property: string): string => {
+  const changeColorSwitch = (property: keyof colorType): string => {
     switch (property) {
       case 'brown':
         return ButtonColor.brown;
