@@ -46,4 +46,7 @@ const List = styled.div`
 const Item = styled.div``;
 const Img = styled.img`
   width: 210px;
+  :hover {
+    cursor: pointer;
+  }
 `;

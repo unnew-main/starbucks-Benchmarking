@@ -62,6 +62,10 @@ const CopyRightItem = styled.div`
     color: #00b050 !important;
     border-left: 0px;
   }
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const ButtonList = styled.div`
