@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { UtilItem } from './UtilItem';
+import { DropDownList } from './DropDownList';
+import dropDownData from '../../dummy/dropDown';
 export function Header() {
+  const [menuHover, setMenuHover] = useState<boolean>(false);
+  const [menuNum, setMenuNum] = useState<number>(0);
+  const onMenuHover = (id: number) => {
+    setMenuHover(true);
+    setMenuNum(id);
+  };
   return (
     <Container>
       <MarginWrapper>
@@ -20,15 +28,32 @@ export function Header() {
             </SearchImgWrapper>
           </UtilNav>
         </InfoWrapper>
-        <DropDownMenuNav>
-          <DropDownMenu>COFFEE</DropDownMenu>
+      </MarginWrapper>
+
+      <DropDownMenuNav>
+        {/* <DropDownMenu>COFFEE</DropDownMenu>
           <DropDownMenu>MENU</DropDownMenu>
           <DropDownMenu>STORE</DropDownMenu>
           <DropDownMenu padding={'10px 30px'}>RESPONSIBILITY</DropDownMenu>
           <DropDownMenu padding={'10px 35px'}>STARBUCKS REWARDS</DropDownMenu>
-          <DropDownMenu>WHAT'S NEW</DropDownMenu>
-        </DropDownMenuNav>
-      </MarginWrapper>
+          <DropDownMenu>WHAT'S NEW</DropDownMenu> */}
+        {dropDownData.map(({ title }, index) => (
+          <DropDownMenuTitle className={`hover${menuNum === index && menuHover ? 'On' : 'Off'}`} onMouseOver={() => onMenuHover(index)}>
+            <MenuTitle>{title}</MenuTitle>
+          </DropDownMenuTitle>
+        ))}
+
+        {menuHover && (
+          <DropDownMenuListContainer
+            onMouseOver={() => setMenuHover(true)}
+            onMouseLeave={() => {
+              setMenuHover(false);
+            }}
+          >
+            <DropDownList menu={dropDownData[menuNum].menu} info={dropDownData[menuNum].info} />
+          </DropDownMenuListContainer>
+        )}
+      </DropDownMenuNav>
     </Container>
   );
 }
@@ -67,10 +92,11 @@ const Logo = styled.img``;
 const InfoWrapper = styled.div`
   position: relative;
   width: 1100px;
-  height: 60px;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 10px;
 `;
 
 const UtilNav = styled.div`
@@ -97,22 +123,35 @@ const SearchImg = styled.img`
 `;
 
 const DropDownMenuNav = styled.div`
-  position: relative;
-  width: 1100px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
   height: 60px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
 `;
-const DropDownMenu = styled.div<{ padding?: string }>`
+const DropDownMenuTitle = styled.div<{ padding?: string }>`
   padding: ${({ padding }) => (padding ? padding : '10px 20px')};
   padding-bottom: 35px;
   font-size: 13px;
+  z-index: 9;
   cursor: pointer;
 
-  :hover {
+  &.hoverOn {
     background-color: #2c2a29;
     color: #669900;
     text-decoration: underline;
   }
+`;
+const MenuTitle = styled.div`
+  width: 100%;
+`;
+const DropDownMenuListContainer = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  background-color: #2c2a29;
 `;
