@@ -39,7 +39,7 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
   height: 100%;
@@ -50,8 +50,7 @@ const MenuListWrapper = styled.div`
   margin-left: -550px;
   left: 50%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+
   width: 80%;
   flex-wrap: wrap;
 `;
@@ -63,12 +62,20 @@ const Title = styled.div`
   margin-bottom: 12px;
   color: white;
   font-weight: bold;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const Item = styled.div`
   font-size: 13px;
   color: #999;
   margin-bottom: 3px;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -92,6 +99,10 @@ const InfoTitle = styled.div`
   color: #999;
   font-size: 14px;
   font-weight: bold;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 const InfoSubtitle = styled.div`
   color: #64a70b;

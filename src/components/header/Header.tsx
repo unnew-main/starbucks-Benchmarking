@@ -31,17 +31,13 @@ export function Header() {
       </MarginWrapper>
 
       <DropDownMenuNav>
-        {/* <DropDownMenu>COFFEE</DropDownMenu>
-          <DropDownMenu>MENU</DropDownMenu>
-          <DropDownMenu>STORE</DropDownMenu>
-          <DropDownMenu padding={'10px 30px'}>RESPONSIBILITY</DropDownMenu>
-          <DropDownMenu padding={'10px 35px'}>STARBUCKS REWARDS</DropDownMenu>
-          <DropDownMenu>WHAT'S NEW</DropDownMenu> */}
-        {dropDownData.map(({ title }, index) => (
-          <DropDownMenuTitle className={`hover${menuNum === index && menuHover ? 'On' : 'Off'}`} onMouseOver={() => onMenuHover(index)}>
-            <MenuTitle>{title}</MenuTitle>
-          </DropDownMenuTitle>
-        ))}
+        <DropDownMenuWrapper>
+          {dropDownData.map(({ title }, index) => (
+            <DropDownMenuTitle className={`hover${menuNum === index && menuHover ? 'On' : 'Off'}`} onMouseOver={() => onMenuHover(index)}>
+              <MenuTitle>{title}</MenuTitle>
+            </DropDownMenuTitle>
+          ))}
+        </DropDownMenuWrapper>
 
         {menuHover && (
           <DropDownMenuListContainer
@@ -131,6 +127,14 @@ const DropDownMenuNav = styled.div`
   justify-content: center;
   align-items: flex-start;
 `;
+
+const DropDownMenuWrapper = styled.div`
+  width: 75%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+`;
 const DropDownMenuTitle = styled.div<{ padding?: string }>`
   padding: ${({ padding }) => (padding ? padding : '10px 20px')};
   padding-bottom: 35px;
@@ -149,8 +153,8 @@ const MenuTitle = styled.div`
 `;
 const DropDownMenuListContainer = styled.div`
   position: absolute;
+
   top: 60px;
-  left: 0;
   width: 100vw;
   z-index: 10;
   background-color: #2c2a29;
