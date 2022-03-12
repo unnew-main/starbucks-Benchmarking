@@ -1,9 +1,9 @@
 export { Header } from './header/Header';
-export { MainBanner } from './mainBanner/MainBanner';
-export { LineNotice } from './lineNotice/LineNotice';
-export { NewRewards } from './newRewards/NewRewards';
-export { Reserve } from './reserve/Reserve';
-export { Favorite } from './favorite/Favorite';
-export { Magazine } from './magazine/Magazine';
-export { Store } from './store/Store';
+export { MainBanner } from './MainBanner';
+export { LineNotice } from './LineNotice';
+export { NewRewards } from './NewRewards';
+export { Reserve } from './Reserve';
+export { Favorite } from './Favorite';
+export { Magazine } from './Magazine';
+export { Store } from './Store';
 export { Footer } from './footer/Footer';
