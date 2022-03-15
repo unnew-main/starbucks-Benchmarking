@@ -1,69 +1,37 @@
-import styled from 'styled-components';
-
+import * as S from './FooterList.style';
 export function FooterList() {
   return (
-    <Container>
-      <UlList>
-        <LiHeader>COMPANY</LiHeader>
-        <LiItem>한눈에 보기</LiItem>
-        <LiItem>스타벅스 사명</LiItem>
-        <LiItem>스타벅스 소개</LiItem>
-        <LiItem>국내 뉴스룸</LiItem>
-        <LiItem>세계의 스타벅스</LiItem>
-        <LiItem>글로벌 뉴스룸</LiItem>
-      </UlList>
-      <UlList>
-        <LiHeader>CORPORATE SALES</LiHeader>
-        <LiItem>단체 및 기업 구매 안내</LiItem>
-      </UlList>
-      <UlList>
-        <LiHeader>PARTNERSHIP</LiHeader>
-        <LiItem>신규 입점 제의</LiItem>
-        <LiItem>협력 고객사 등록신청</LiItem>
-      </UlList>
-      <UlList>
-        <LiHeader>ONLINE COMMUNITY</LiHeader>
-        <LiItem>페이스북</LiItem>
-        <LiItem>트위터</LiItem>
-        <LiItem>유튜브</LiItem>
-        <LiItem>인스타그램</LiItem>
-      </UlList>
-      <UlList>
-        <LiHeader>RECRUIT</LiHeader>
-        <LiItem>채용 소개</LiItem>
-        <LiItem>채용 지원하기</LiItem>
-      </UlList>
-    </Container>
+    <S.Container>
+      <S.UlList>
+        <S.LiHeader>COMPANY</S.LiHeader>
+        <S.LiItem>한눈에 보기</S.LiItem>
+        <S.LiItem>스타벅스 사명</S.LiItem>
+        <S.LiItem>스타벅스 소개</S.LiItem>
+        <S.LiItem>국내 뉴스룸</S.LiItem>
+        <S.LiItem>세계의 스타벅스</S.LiItem>
+        <S.LiItem>글로벌 뉴스룸</S.LiItem>
+      </S.UlList>
+      <S.UlList>
+        <S.LiHeader>CORPORATE SALES</S.LiHeader>
+        <S.LiItem>단체 및 기업 구매 안내</S.LiItem>
+      </S.UlList>
+      <S.UlList>
+        <S.LiHeader>PARTNERSHIP</S.LiHeader>
+        <S.LiItem>신규 입점 제의</S.LiItem>
+        <S.LiItem>협력 고객사 등록신청</S.LiItem>
+      </S.UlList>
+      <S.UlList>
+        <S.LiHeader>ONLINE COMMUNITY</S.LiHeader>
+        <S.LiItem>페이스북</S.LiItem>
+        <S.LiItem>트위터</S.LiItem>
+        <S.LiItem>유튜브</S.LiItem>
+        <S.LiItem>인스타그램</S.LiItem>
+      </S.UlList>
+      <S.UlList>
+        <S.LiHeader>RECRUIT</S.LiHeader>
+        <S.LiItem>채용 소개</S.LiItem>
+        <S.LiItem>채용 지원하기</S.LiItem>
+      </S.UlList>
+    </S.Container>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  width: 80%;
-  justify-content: flex-start;
-  align-items: flex-start;
-`;
-
-const UlList = styled.div`
-  width: 20%;
-`;
-
-const LiHeader = styled.div`
-  font-size: 14px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  :hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-`;
-const LiItem = styled.div`
-  font-size: 12px;
-  font-weight: bold;
-
-  margin-bottom: 7px;
-  :hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-`;
