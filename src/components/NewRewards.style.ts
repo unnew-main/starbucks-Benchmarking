@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-
   height: 100%;
   padding-top: 30px;
   padding-bottom: 40px;
@@ -21,7 +20,6 @@ export const Wrapper = styled.div`
   margin: auto;
 `;
 
-export const LogoWrapper = styled.div``;
 export const Logo = styled.img`
   width: 176px;
   height: 152px;

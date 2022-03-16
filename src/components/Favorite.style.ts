@@ -34,16 +34,12 @@ export const TitleWrapper = styled.div`
   margin-bottom: 50px;
 `;
 
-export const Title = styled.img``;
 export const SubTitleWrapper = styled.div`
   margin-bottom: 50px;
 `;
-export const SubTitle = styled.img``;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-export const FavImageWrapper = styled.div``;
-export const FavImage = styled.img``;

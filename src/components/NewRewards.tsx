@@ -4,9 +4,9 @@ export function NewRewards() {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.LogoWrapper>
+        <div>
           <S.Logo src="	https://image.istarbucks.co.kr/common/img/main/rewards-logo.png" />
-        </S.LogoWrapper>
+        </div>
         <S.ContentsWrapper>
           <S.InfoWrapper>
             <S.InfoTextWrapper>

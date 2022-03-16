@@ -15,7 +15,7 @@ export function Magazine() {
       <S.Wrapper>
         <S.ContentWrapper>
           <S.TitleWrapper>
-            <S.Title src="https://image.istarbucks.co.kr/img/event/2022/reserve_text_pc_220120.png" />
+            <img src="https://image.istarbucks.co.kr/img/event/2022/reserve_text_pc_220120.png" />
           </S.TitleWrapper>
 
           <S.ButtonWrapper>
@@ -24,9 +24,9 @@ export function Magazine() {
             </Button>
           </S.ButtonWrapper>
         </S.ContentWrapper>
-        <S.MagazineImageWrapper>
+        <div>
           <S.MagazineImage scroll={onScroll} src="https://image.istarbucks.co.kr/img/event/2022/reserve_visual_pc_220119.png" />
-        </S.MagazineImageWrapper>
+        </div>
       </S.Wrapper>
     </S.Container>
   );

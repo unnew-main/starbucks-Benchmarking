@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 100%;
-  height: 62px;
-  position: relative;
+const FlexCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const Container = styled(FlexCenter)`
+  width: 100%;
+  height: 62px;
+  position: relative;
 `;
 
 export const LineNoticeBg = styled.div`
@@ -31,21 +34,14 @@ export const LineNoticeContent = styled.div`
   display: flex;
 `;
 
-export const LeftContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const LeftContent = styled(FlexCenter)`
   width: 50%;
   height: 100%;
   color: rgb(255, 255, 255);
 `;
-export const LeftTitle = styled.div`
+export const LeftTitle = styled(FlexCenter)`
   width: 20%;
   font-weight: bold;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 export const LeftList = styled.div`
   width: 100%;
@@ -54,34 +50,24 @@ export const LeftList = styled.div`
 
   width: 75%;
 `;
-export const LeftPlusButtonWrapper = styled.div`
+export const LeftPlusButtonWrapper = styled(FlexCenter)`
   width: 15%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 export const LeftPlusButton = styled.img`
   width: 36px;
   height: 36px;
   cursor: pointer;
 `;
-export const RightContent = styled.div`
+export const RightContent = styled(FlexCenter)`
   width: 50%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
-export const RightTitle = styled.div`
+export const RightTitle = styled(FlexCenter)`
   width: 50%;
   font-weight: bold;
   font-size: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 export const RightMoreButtonWrapper = styled.div`
   width: 50%;

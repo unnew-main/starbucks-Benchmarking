@@ -27,12 +27,10 @@ export const ContentWrapper = styled.div`
 export const TitleWrapper = styled.div`
   margin-bottom: 30px;
 `;
-export const Title = styled.img``;
 export const ButtonWrapper = styled.div`
   padding-left: 140px;
 `;
 
-export const MagazineImageWrapper = styled.div``;
 export const MagazineImage = styled.img<{ scroll: number }>`
   opacity: ${({ scroll }) => (scroll > 1600 ? 1 : 0)};
   transition: 2s ease-out;
